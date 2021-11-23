@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'Video'
+    'Comment',
+    'Reply',
     
     
     
@@ -80,8 +81,8 @@ WSGI_APPLICATION = 'youtube_clone_comments.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'mysql.connector.django',
+        'NAME': 'youtube_clone_comments',
     }
 }
 
@@ -128,3 +129,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try: 
+    from youtube_clone_comments.local_settings import *
+
+except ImportError:
+    pass
