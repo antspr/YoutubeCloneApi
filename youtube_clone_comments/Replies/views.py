@@ -1,8 +1,9 @@
 from django.db import render
 from .models import Reply
-from rest_framework import APIView
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.views import status
+from .serializers import ReplySerializer
 
 # Create your views here.
 class RepliesList(APIView):
@@ -13,5 +14,5 @@ class RepliesList(APIView):
         return Response(serializer.data)
 
     def postReplies(self, request):
-        serializer =RepliesSerializer(data=request.data)
+        serializer =ReplySerializer(data=request.data)
         return Response(serializer.data)

@@ -1,3 +1,4 @@
+
 """youtube_clone_comments URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -14,11 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   # path('', include('Comment.urls')),
+    path('', include('Comments.urls')),
+    #path('', include('Replies.urls')),
    # path('reply/', include('Reply.urls'))
 ]
 

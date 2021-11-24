@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'Comment',
-    'Reply',
+    'Comments',
+    'Replies',
     
     
     
@@ -79,12 +79,7 @@ WSGI_APPLICATION = 'youtube_clone_comments.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE':'mysql.connector.django',
-        'NAME': 'youtube_clone_comments',
-    }
-}
+
 
 
 # Password validation
