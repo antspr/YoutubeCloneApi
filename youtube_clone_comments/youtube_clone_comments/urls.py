@@ -21,7 +21,7 @@ from django.urls.conf import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Comments.urls')),
-    #path('', include('Replies.urls')),
+    path('', include('Replies.urls')),
    # path('reply/', include('Reply.urls'))
 ]
 
