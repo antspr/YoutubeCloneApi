@@ -1,11 +1,8 @@
 from django.urls import path
-from . import views
 from rest_framework.views import APIView
+from . import views
 
-
-# app_name ="replies"
 urlpatterns = [
-     path('Replies', views.RepliesList.as_view()),
-     
-
- ]
+    path('replies/', views.ReplyList.as_view()),
+    path('replies/<int:pk>/', views.ReplyDetail.as_view()),
+]
