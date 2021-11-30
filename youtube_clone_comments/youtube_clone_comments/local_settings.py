@@ -5,7 +5,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'youtube_clone_comments',
         'USER': 'root',
-        'PASSWORD': 'd3WK0DEckaMP',
+        'PASSWORD': 'DevCodeCamp123',
         'HOST':'127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
